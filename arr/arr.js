@@ -7,5 +7,7 @@ function(arr,target){
 	if(m===0 && n === 0){
 		return false;
 	}
-	while(row > )
+	while(row >=0 && col <=m-1){
+		
+	}
 }

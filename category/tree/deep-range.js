@@ -35,29 +35,13 @@ function deepEach(root){
 // console.log(deepEach(tree))
 
 
-/**
- *@description 广度优先
- */
-function rangeEach(root){
-    let res = [];
-    let stack = [root];
-    function each(arr){
-        if(Array.isArray(arr)){
-            arr.forEach(item=>{
-                res.push(item.val);
-                each(item.children)
-            })
-        }
-    }
-    each(stack)
-    return res;
-}
-
-const bfs = (root)=>{
+const rangeEach = (root)=>{
+    let res = []
     const q = [root];
     while(q.length > 0){
         const n = q.shift();
-        console.log(n.val);
+        // console.log(n.val);
+        res.push(n.val)
         n.children.forEach(child=>{
             q.push(child)
         })

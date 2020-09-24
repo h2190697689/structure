@@ -1,3 +1,6 @@
+/**
+ * 1. 从第二个数开始往前比  2. 比它大往后排  3. 以此类推进行到最后一个数
+ */
 function insert(arr) {
 	var len =arr.length;
     for (var i=1;i<len; i++) {
@@ -13,3 +16,18 @@ function insert(arr) {
 }
 var a =[3,6,9,4,5,3,6 ];
 console.log(insert(a));
+
+
+
+Array.prototype.insertionSort = function(){
+    for(let i=1;i<this.length;i++){
+        const temp = this[i];
+        let j = i;
+        while(j>0 && arr[j-1]>temp){
+            arr[j] = arr[j-1];
+            j--;
+        }
+        this[j] = temp;
+    }
+
+}

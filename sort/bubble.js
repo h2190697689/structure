@@ -22,7 +22,7 @@ console.log(bubble(a));
 
 function bubble(arr){
     for(let i=arr.length; i>0; i--){
-        for(let j=0; j<i; j++){
+        for(let j=0; j<i-1; j++){
             if(arr[j]>arr[j+1]){
                 const temp = arr[j];
                 arr[j] = arr[j+1];
@@ -31,4 +31,17 @@ function bubble(arr){
         }
     }
     return arr
+}
+
+
+Array.prototype.bubbleSort = function(){
+    for(let i=0;i<this.length -1; i++){
+        for(let j=0; j<this.length-1-i;j++){
+            if(this[j]>this[j+1]){
+                const temp = this[j];
+                this[j] = this[j+1];
+                this[j+1] = temp;
+            }
+        }
+    }
 }

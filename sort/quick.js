@@ -1,3 +1,8 @@
+/**
+ *
+ * @param {*} arr
+ */
+
 function quick(arr){
 	if(arr.length===0){
 		return []
